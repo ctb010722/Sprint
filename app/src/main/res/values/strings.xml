@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mis Lugares 2</string>
+    <string name="fui_default_toolbar_title">Tipo de Autentificación</string>
+    <string name="fui_sign_in_with_email">Entra con tu correo</string>
+    <string name="fui_progress_dialog_signing_up">Creando cuenta...</string>
+    <string name="facebook_app_id">509474115027021</string>
+    <string name="default_web_client_id">1:471696898434:android:e52027270bdcf65d6cf79b</string>
+    <string name="settings_icon_desc">Settings Icon</string>
+    <string name="header_icon_desc">Header Icon Description</string>
+    <string name="user_icon_desc">User Icon</string>
+    <string name="arrow_icon_desc">Arrow Icon</string>
+
+    <string name="pet_icon_desc">Pet Icon Description</string>
+    <string name="home_icon_desc">Home Icon Description</string>
+    <string name="statistics_icon_desc">Statistics Icon Description</string>
+</resources>

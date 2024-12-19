@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MisLugares2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MisLugares2" parent="Base.Theme.MisLugares2" />
+    <style name="FirebaseUITema" parent="FirebaseUI">
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#AA00FF</item>
+        <item name="colorControlNormal">#4CAF50</item>
+        <item name="colorControlActivated">#AEEA00</item>
+        <item name="colorControlHighlight">#69F0AE</item>
+        <item name="android:windowBackground">@android:color/holo_green_light
+        </item> <!-- o reemplaza por drawable-->
+    </style>
+
+</resources>
