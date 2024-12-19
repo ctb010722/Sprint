@@ -1,6 +1,5 @@
 package com.example.mislugares2;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,7 +42,6 @@ public class CustomLoginActivity extends AppCompatActivity {
     private CallbackManager callbackManager;
     private LoginButton btnFacebook;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +61,7 @@ public class CustomLoginActivity extends AppCompatActivity {
         etContraseña = findViewById(R.id.contraseña);
         tilCorreo = findViewById(R.id.til_correo);
         tilContraseña = findViewById(R.id.til_contraseña);
-        //contenedor = findViewById(R.id.contenedor);
+        contenedor = findViewById(R.id.contenedor);
 
         // Facebook 登录
         setupFacebookLogin();

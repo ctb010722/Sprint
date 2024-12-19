@@ -1,69 +1,200 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/light_background_color">
+    android:background="#BFE5E0"
+    android:padding="20dp">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Left icon (logo) -->
+        <ImageView
+            android:id="@+id/header_left_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/header_icon_desc"
+            android:src="@mipmap/ic_launcher_foreground" />
+
+        <!-- Right user icon -->
+        <ImageView
+            android:id="@+id/header_right_icon"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/user_icon_desc"
+            android:src="@drawable/usuario" />
+    </LinearLayout>
+
+    <!-- 标题 -->
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="Register"
-        android:textColor="@color/text_color"
-        android:textSize="32sp" />
+        android:textColor="#333333"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
 
+    <!-- Name 标签 -->
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Name 输入框 -->
     <EditText
         android:id="@+id/name"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:height="50dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="Name" />
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter your name"
+        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
 
+    <!-- Phone 标签 -->
+    <TextView
+        android:id="@+id/tvPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Phone 输入框 -->
     <EditText
         android:id="@+id/phone"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:height="50dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="Phone Number"
-        android:inputType="phone" />
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
 
+    <!-- Email 标签 -->
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Email 输入框 -->
     <EditText
         android:id="@+id/email"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter your email"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background" />
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
 
+    <!-- Password 标签 -->
+    <TextView
+        android:id="@+id/tvPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Password 输入框 -->
     <EditText
         android:id="@+id/password"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter your password"
         android:inputType="textPassword"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/edit_text_background" />
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
 
-    <!-- Divider OR -->
-
+    <!-- 注册按钮 -->
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#438E86"
         android:text="Register"
-        android:onClick="onRegister"
-        android:background="@drawable/button_background"
-        android:textColor="@color/white" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
 
+    <!-- 勾选框 -->
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="match_parent"
+        android:id="@+id/cbTerms"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CheckBox" />
-</LinearLayout>
+        android:layout_marginTop="30dp"
+        android:text="I agree to the terms and conditions"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/footer_home_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/home_icon_desc"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/footer_statistics_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:contentDescription="@string/statistics_icon_desc"
+            android:src="@drawable/monitorizacion" />
+
+        <ImageView
+            android:id="@+id/footer_settings_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/settings_icon_desc"
+            android:src="@drawable/configuracion" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

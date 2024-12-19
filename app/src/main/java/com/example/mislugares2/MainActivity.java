@@ -13,12 +13,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // 显示默认内容 (Home 页面)
+
+
+
 
         // Obtener una instancia del usuario autenticado
         FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
@@ -56,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
         TextView uid = findViewById(R.id.uid);
         uid.setText(usuario.getUid());
+        setContentView(R.layout.activity_main); // 加载主页面布局
+
+
+
+
     }
 
     public void cerrarSesion(View view) {
@@ -72,7 +83,11 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
                 });
+
     }
+
+
+
 
 
 
